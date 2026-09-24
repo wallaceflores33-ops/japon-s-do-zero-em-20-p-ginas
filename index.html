@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Guia de Japonês para Iniciante — Hiragana, Katakana e 100 Frases</title>
+<meta name="description" content="Guia de 20 páginas com hiragana, katakana e as 100 frases mais usadas, com pronúncia em português. Imprime e estuda sem internet.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F4F5FA;
+  --surface:#FFFFFF;
+  --ink:#141B44;
+  --ink-soft:#4A5175;
+  --indigo:#2A3990;
+  --rule:#D5D9EA;
+  --grid:#C3CAE6;
+  --seg1:#2A3990;
+  --seg2:#8593E0;
+  --seg3:#F6B92B;
+  --btn-bg:#2A3990;
+  --btn-ink:#FFFFFF;
+  --btn-shadow:#F6B92B;
+  --gold:#F6B92B;
+  --bonus-bg:#FFF3D0;
+  --bonus-line:#E9A50C;
+  --bonus-ink:#4A3300;
+  --band:#1B2670;
+  --band-ink:#FFFFFF;
+  --serif:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho","Noto Serif JP",Georgia,serif;
+  --sans:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic","Noto Sans JP","Segoe UI",system-ui,-apple-system,Arial,sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1230;
+    --surface:#171C48;
+    --ink:#ECEEFA;
+    --ink-soft:#A9AFD3;
+    --indigo:#9AA7FF;
+    --rule:#2B3266;
+    --grid:#333B76;
+    --seg1:#9AA7FF;
+    --seg2:#535FB8;
+    --seg3:#F6B92B;
+    --btn-bg:#9AA7FF;
+    --btn-ink:#0E1230;
+    --btn-shadow:#F6B92B;
+    --bonus-bg:#2A2310;
+    --bonus-line:#F6B92B;
+    --bonus-ink:#FFE9AE;
+    --band:#090C26;
+    --band-ink:#ECEEFA;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0E1230;
+  --surface:#171C48;
+  --ink:#ECEEFA;
+  --ink-soft:#A9AFD3;
+  --indigo:#9AA7FF;
+  --rule:#2B3266;
+  --grid:#333B76;
+  --seg1:#9AA7FF;
+  --seg2:#535FB8;
+  --seg3:#F6B92B;
+  --btn-bg:#9AA7FF;
+  --btn-ink:#0E1230;
+  --btn-shadow:#F6B92B;
+  --bonus-bg:#2A2310;
+  --bonus-line:#F6B92B;
+  --bonus-ink:#FFE9AE;
+  --band:#090C26;
+  --band-ink:#ECEEFA;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{height:100%;scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%}
+body{
+  margin:0;min-height:100%;
+  background:var(--bg);color:var(--ink);
+  font-family:var(--sans);font-size:18px;line-height:1.6;
+}
+img,svg{max-width:100%}
+h1,h2,h3,p,ul,ol{margin:0}
+ul,ol{padding:0;list-style:none}
+a{color:inherit}
+.wrap{width:min(1080px,100% - 40px);margin-inline:auto}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* Typography */
+.serif{font-family:var(--serif)}
+h1,h2{font-family:var(--serif);font-weight:800;letter-spacing:-.01em;line-height:1.15}
+h2{font-size:clamp(28px,4.4vw,44px);max-width:22ch}
+h3{font-size:20px;line-height:1.3;font-weight:700}
+.lead{font-size:clamp(18px,2.2vw,21px);color:var(--ink-soft);max-width:60ch}
+
+/* Buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.7em;
+  padding:17px 28px;min-height:56px;
+  background:var(--btn-bg);color:var(--btn-ink);
+  font:700 18px/1.2 var(--sans);text-decoration:none;
+  border:2px solid var(--ink);border-radius:6px;
+  box-shadow:5px 5px 0 var(--btn-shadow);
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--btn-shadow)}
+.btn:active{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--btn-shadow)}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--indigo);outline-offset:3px}
+.btn svg{width:22px;height:22px;flex:none}
+.btn--lg{font-size:20px;padding:20px 32px;width:100%}
+
+/* Hero */
+.hero{
+  padding:clamp(36px,7vw,84px) 0 clamp(56px,8vw,96px);
+  background-image:
+    linear-gradient(var(--grid) 1px,transparent 1px),
+    linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:36px 36px;
+  background-position:-1px -1px;
+  position:relative;
+}
+.hero::before{ /* fades the grid paper out at the bottom without masking the content */
+  content:"";position:absolute;inset:auto 0 0 0;height:30%;
+  background:linear-gradient(transparent,var(--bg));pointer-events:none;
+}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(32px,5vw,64px);align-items:center}
+.facts{display:flex;flex-wrap:wrap;gap:6px 0;font-size:15px;font-weight:500;color:var(--ink-soft);margin-bottom:22px}
+.facts span{padding:0 14px;border-left:2px solid var(--indigo)}
+.facts span:first-child{padding-left:0;border-left:0}
+h1{margin:0 0 30px;font-size:1rem;position:relative;padding-top:22px}
+h1::before{content:"";position:absolute;top:0;left:0;width:72px;height:6px;background:var(--gold);border-radius:1px}
+h1 .a{
+  display:block;
+  font-family:var(--serif);font-weight:800;
+  font-size:clamp(40px,7.4vw,82px);line-height:1.02;letter-spacing:-.025em;
+  max-width:11ch;text-wrap:balance;
+}
+h1 .b{
+  display:block;margin-top:24px;
+  font-family:var(--sans);font-weight:500;letter-spacing:0;
+  font-size:clamp(19px,2.3vw,24px);line-height:1.4;color:var(--ink);
+  max-width:32ch;
+}
+.path{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0 0 26px;max-width:520px}
+.path li{border-top:5px solid var(--seg1);padding-top:10px;display:grid;gap:2px;align-content:start}
+.path li:nth-child(2){border-top-color:var(--seg2)}
+.path li:nth-child(3){border-top-color:var(--seg3)}
+.path b{font-size:16px;font-weight:900;line-height:1.2}
+.path span{font-size:15px;line-height:1.35;color:var(--ink-soft)}
+.hero .lead{margin-bottom:32px;font-size:clamp(17px,2vw,19px);max-width:44ch}
+.hero .btn{width:auto}
+
+/* Practice sheet (hero visual) */
+.sheet{
+  background:var(--surface);
+  border:2px solid var(--ink);border-radius:6px;
+  padding:clamp(14px,2.4vw,22px);
+  box-shadow:10px 10px 0 var(--indigo);
+  display:grid;gap:18px;
+}
+.sheet-label{font-size:14px;font-weight:700;color:var(--ink-soft);margin-bottom:8px}
+.cells{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.k{display:grid;gap:4px;justify-items:center;font-size:14px;font-weight:500;color:var(--ink-soft)}
+.cell{
+  width:100%;aspect-ratio:1;display:grid;place-items:center;
+  border:1.5px solid var(--indigo);
+  font-family:var(--serif);font-weight:800;font-size:clamp(30px,6.4vw,46px);line-height:1;color:var(--ink);
+  background-image:
+    linear-gradient(90deg,transparent calc(50% - .5px),var(--grid) calc(50% - .5px),var(--grid) calc(50% + .5px),transparent calc(50% + .5px)),
+    linear-gradient(transparent calc(50% - .5px),var(--grid) calc(50% - .5px),var(--grid) calc(50% + .5px),transparent calc(50% + .5px));
+}
+.cell span{display:block;animation:ink .6s both;animation-delay:calc(var(--i) * 70ms + 250ms)}
+@keyframes ink{from{opacity:0;transform:scale(1.12)}to{opacity:1;transform:none}}
+.phrase{
+  display:grid;grid-template-columns:auto 1fr;gap:4px 18px;align-items:center;
+  border-top:2px dashed var(--grid);padding-top:16px;
+}
+.phrase .jp{grid-row:1/3;font-family:var(--serif);font-weight:800;font-size:clamp(28px,5vw,38px);line-height:1.1}
+.phrase .pron{font-weight:700;font-size:17px}
+.phrase .pt{font-size:15px;color:var(--ink-soft)}
+
+/* Sections */
+.sec{padding:clamp(56px,9vw,104px) 0}
+.sec--surface{background:var(--surface);border-block:1px solid var(--rule)}
+.sec-head{display:grid;gap:16px;margin-bottom:clamp(32px,5vw,56px)}
+
+/* What it is */
+.trio{display:grid;grid-template-columns:repeat(3,1fr)}
+.trio>li{padding:0 clamp(16px,3vw,36px);border-left:2px solid var(--rule);display:grid;gap:12px;align-content:start}
+.trio>li:first-child{padding-left:0;border-left:0}
+.trio>li:last-child{padding-right:0}
+.glyph{
+  width:72px;height:72px;display:grid;place-items:center;
+  border:1.5px solid var(--indigo);
+  font-family:var(--serif);font-weight:800;font-size:38px;line-height:1;
+  background-image:
+    linear-gradient(90deg,transparent calc(50% - .5px),var(--grid) calc(50% - .5px),var(--grid) calc(50% + .5px),transparent calc(50% + .5px)),
+    linear-gradient(transparent calc(50% - .5px),var(--grid) calc(50% - .5px),var(--grid) calc(50% + .5px),transparent calc(50% + .5px));
+}
+.step-n{font-weight:900;font-size:15px;color:var(--indigo)}
+.trio p,.how p{color:var(--ink-soft)}
+
+/* Guide contents */
+.pages{display:grid;grid-template-columns:repeat(20,1fr);gap:3px}
+.pages i{display:block;height:58px;border-radius:2px;background:var(--seg1)}
+.pages i.k2{background:var(--seg2)}
+.pages i.f{background:var(--seg3)}
+.pl{display:grid;grid-template-columns:repeat(20,1fr);gap:3px;margin-top:10px;margin-bottom:clamp(28px,4vw,44px)}
+.pl div{border-left:2px solid var(--ink);padding-left:6px;font-size:13px;line-height:1.35;white-space:nowrap}
+.pl b{display:block}
+.pl span{color:var(--ink-soft)}
+.pl div:nth-child(1){grid-column:1/5}
+.pl div:nth-child(2){grid-column:5/10}
+.pl div:nth-child(3){grid-column:10/21}
+.parts{display:grid;gap:0;border-top:1px solid var(--rule)}
+.parts li{display:grid;grid-template-columns:14px 1fr;gap:0 18px;padding:22px 0;border-bottom:1px solid var(--rule)}
+.parts li::before{content:"";grid-row:1/3;align-self:stretch;background:var(--seg1);border-radius:2px}
+.parts li:nth-child(2)::before{background:var(--seg2)}
+.parts li:nth-child(3)::before{background:var(--seg3)}
+.parts p{color:var(--ink-soft)}
+.note{margin-top:28px;font-weight:700;padding:16px 20px;border:2px solid var(--ink);border-radius:6px;background:var(--surface);max-width:none}
+
+/* Who it is for + checklists */
+.checks{display:grid;gap:14px 40px}
+.checks li{position:relative;padding-left:38px}
+.checks li::before{
+  content:"";position:absolute;left:0;top:.18em;width:24px;height:24px;background:var(--indigo);
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/contain no-repeat;
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/contain no-repeat;
+}
+.checks--2{grid-template-columns:1fr 1fr}
+
+/* How it works */
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:0;counter-reset:s}
+.how li{display:grid;gap:8px;align-content:start;padding-right:clamp(16px,3vw,36px);position:relative}
+.how li::before{
+  content:"";display:block;height:2px;background:var(--ink);margin-bottom:18px;
+}
+.how b{font-size:20px;display:block}
+
+/* Receive */
+.receive{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(28px,6vw,72px);align-items:start}
+
+/* Bonus */
+.bonus-wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,32px)}
+.bonus{
+  position:relative;
+  background:var(--bonus-bg);color:var(--bonus-ink);
+  border:4px solid var(--bonus-line);border-radius:10px;
+  padding:clamp(28px,4vw,40px) clamp(22px,3vw,32px) clamp(22px,3vw,32px);
+  display:grid;gap:12px;align-content:start;
+  box-shadow:0 0 0 6px color-mix(in srgb,var(--bonus-line) 25%,transparent);
+}
+.bonus-tag{
+  position:absolute;top:-18px;left:22px;
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--bonus-line);color:#2A1C00;
+  font-weight:900;font-size:15px;letter-spacing:.06em;
+  padding:7px 14px 7px 10px;border-radius:6px;transform:rotate(-2.5deg);
+}
+.bonus-tag svg{width:22px;height:22px}
+.bonus h3{font-family:var(--serif);font-weight:800;font-size:clamp(21px,2.6vw,26px);line-height:1.25}
+.bonus p{font-size:17px}
+.bonus .val{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;font-weight:700;margin-top:6px}
+.bonus .val s{font-size:20px;opacity:.75}
+.bonus .val span{font-size:15px;background:var(--bonus-ink);color:var(--bonus-bg);padding:3px 10px;border-radius:99px}
+
+/* Offer */
+.offer{background:var(--band);color:var(--band-ink);padding:clamp(56px,9vw,104px) 0}
+.ticket{
+  background:var(--surface);color:var(--ink);
+  border:2px solid var(--ink);border-radius:6px;
+  box-shadow:10px 10px 0 var(--gold);
+  max-width:680px;margin-inline:auto;
+  padding:clamp(24px,5vw,48px);
+  display:grid;gap:26px;
+}
+.ticket h2{font-size:clamp(28px,5vw,44px);max-width:none}
+.ticket .checks li{font-size:17px}
+.ticket .checks li.b{font-weight:700}
+.ticket .checks li.b::after{
+  content:"Bônus";margin-left:10px;font-size:12px;font-weight:900;letter-spacing:.05em;
+  background:var(--gold);color:#2A1C00;padding:2px 8px;border-radius:4px;vertical-align:.1em;
+}
+.price{border-top:2px dashed var(--grid);padding-top:22px;display:grid;gap:4px}
+.price .from{color:var(--ink-soft);font-size:17px}
+.price .from s{opacity:.9}
+.price .now{font-family:var(--serif);font-weight:800;font-size:clamp(46px,9vw,68px);line-height:1;letter-spacing:-.02em}
+.price .once{font-weight:700;color:var(--ink-soft);font-size:16px}
+.guarantee{display:flex;gap:12px;align-items:flex-start;font-size:16px;color:var(--ink-soft)}
+.guarantee svg{width:30px;height:30px;flex:none;color:var(--indigo)}
+.guarantee b{color:var(--ink)}
+
+/* Footer */
+footer{padding:32px 0 48px;font-size:14px;color:var(--ink-soft)}
+footer .wrap{display:grid;gap:10px;max-width:760px}
+
+/* Sticky mobile bar */
+.sticky{display:none}
+
+/* Responsive */
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:1fr}
+  .sheet{margin-right:8px}
+  .receive{grid-template-columns:1fr}
+  .bonus-wrap{grid-template-columns:1fr;gap:34px}
+}
+@media (max-width:720px){
+  body{font-size:17px;padding-bottom:88px}
+  .trio,.how{grid-template-columns:1fr;gap:28px}
+  .trio>li{padding:0;border-left:0;grid-template-columns:72px 1fr;gap:4px 18px}
+  .trio>li .glyph{grid-row:1/4}
+  .trio>li>*:not(.glyph){grid-column:2}
+  .how li{padding-right:0}
+  .checks--2{grid-template-columns:1fr}
+  .hero .btn{width:100%}
+  .path{gap:10px}
+  .path b{font-size:15px}
+  .path span{font-size:14px}
+  .pl div{font-size:11.5px;padding-left:5px}
+  .pages i{height:46px}
+  .sticky{
+    display:flex;align-items:center;justify-content:space-between;gap:14px;
+    position:fixed;left:0;right:0;bottom:0;z-index:20;
+    padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));
+    background:var(--surface);border-top:2px solid var(--ink);
+    transform:translateY(110%);visibility:hidden;
+    transition:transform .25s ease,visibility 0s linear .25s;
+  }
+  .sticky.on{transform:none;visibility:visible;transition:transform .25s ease}
+  .sticky .p{font-family:var(--serif);font-weight:800;font-size:24px;line-height:1.1}
+  .sticky .p small{display:block;font:500 12px/1.2 var(--sans);color:var(--ink-soft)}
+  .sticky .btn{min-height:48px;padding:12px 20px;font-size:16px;box-shadow:3px 3px 0 var(--btn-shadow)}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<header class="hero" id="topo">
+  <div class="wrap">
+    <div>
+      <div class="facts">
+        <span>Guia imprimível</span>
+        <span>20 páginas</span>
+        <span>Entrega imediata</span>
+      </div>
+      <h1>
+        <span class="a">Comece japonês do zero em 20 páginas</span><span class="sr-only">. </span>
+        <span class="b">Hiragana, katakana e as 100 frases mais usadas, com a pronúncia em português do lado.</span>
+      </h1>
+      <ol class="path">
+        <li><b>Página 1</b><span>você começa o hiragana</span></li>
+        <li><b>Página 5</b><span>o katakana</span></li>
+        <li><b>Página 10</b><span>já está lendo as frases do dia a dia</span></li>
+      </ol>
+      <p class="lead">Imprime, coloca na pasta e estuda onde quiser, sem app, sem curso e sem internet.</p>
+      <a class="btn" id="hero-cta" href="#oferta">
+        Quero o guia — R$ 27,90
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+
+    <div class="sheet" role="img" aria-label="Exemplo de página do guia: hiragana, katakana e uma frase com pronúncia em português">
+      <div>
+        <div class="sheet-label">Hiragana</div>
+        <div class="cells">
+          <div class="k"><div class="cell"><span style="--i:0">あ</span></div>a</div>
+          <div class="k"><div class="cell"><span style="--i:1">い</span></div>i</div>
+          <div class="k"><div class="cell"><span style="--i:2">う</span></div>u</div>
+          <div class="k"><div class="cell"><span style="--i:3">え</span></div>e</div>
+          <div class="k"><div class="cell"><span style="--i:4">お</span></div>o</div>
+        </div>
+      </div>
+      <div>
+        <div class="sheet-label">Katakana</div>
+        <div class="cells">
+          <div class="k"><div class="cell"><span style="--i:5">ア</span></div>a</div>
+          <div class="k"><div class="cell"><span style="--i:6">イ</span></div>i</div>
+          <div class="k"><div class="cell"><span style="--i:7">ウ</span></div>u</div>
+          <div class="k"><div class="cell"><span style="--i:8">エ</span></div>e</div>
+          <div class="k"><div class="cell"><span style="--i:9">オ</span></div>o</div>
+        </div>
+      </div>
+      <div class="phrase">
+        <div class="jp"><span lang="ja">ありがとう</span></div>
+        <div class="pron">a-ri-ga-tô</div>
+        <div class="pt">Obrigado</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- O que é isso -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Não é curso solto. É o essencial do japonês num só lugar, com pronúncia em português.</h2>
+        <p class="lead">Você não precisa de vários aplicativos e sites diferentes pra começar japonês. O Guia de Japonês para Iniciante reúne os dois silabários e as 100 frases mais úteis, cada uma com a pronúncia já escrita em português do lado.</p>
+      </div>
+      <ol class="trio">
+        <li>
+          <div class="glyph" lang="ja" aria-hidden="true">あ</div>
+          <span class="step-n">01</span>
+          <h3>Aprende Hiragana</h3>
+          <p>As primeiras páginas ensinam o silabário base do japonês.</p>
+        </li>
+        <li>
+          <div class="glyph" lang="ja" aria-hidden="true">ア</div>
+          <span class="step-n">02</span>
+          <h3>Aprende Katakana</h3>
+          <p>Em seguida, o silabário usado pra palavras estrangeiras.</p>
+        </li>
+        <li>
+          <div class="glyph" lang="ja" aria-hidden="true">話</div>
+          <span class="step-n">03</span>
+          <h3>Estuda as 100 frases do dia a dia</h3>
+          <p>Já com pronúncia em português, prontas pra usar em qualquer conversa básica.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- O que vem no guia -->
+  <section class="sec sec--surface">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>3 partes, 20 páginas no total</h2>
+      </div>
+      <div class="pages" aria-hidden="true">
+        <i></i><i></i><i></i><i></i>
+        <i class="k2"></i><i class="k2"></i><i class="k2"></i><i class="k2"></i><i class="k2"></i>
+        <i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i>
+      </div>
+      <div class="pl" aria-hidden="true">
+        <div><b>Hiragana</b><span>Página 1</span></div>
+        <div><b>Katakana</b><span>Página 5</span></div>
+        <div><b>100 Frases</b><span>Página 10</span></div>
+      </div>
+      <ul class="parts">
+        <li>
+          <h3>Tabela de Hiragana</h3>
+          <p>O silabário completo, com traçado e pronúncia.</p>
+        </li>
+        <li>
+          <h3>Tabela de Katakana</h3>
+          <p>O segundo silabário, também com traçado e pronúncia.</p>
+        </li>
+        <li>
+          <h3>100 Frases do Dia a Dia</h3>
+          <p>Frases organizadas por tema, cada uma com a pronúncia em português ao lado.</p>
+        </li>
+      </ul>
+      <p class="note">Cada página: caractere ou frase, pronúncia em português e contexto de uso.</p>
+    </div>
+  </section>
+
+  <!-- Pra quem é -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Pra quem é</h2>
+        <p class="lead">Se você se reconhece em algum desses pontos, o material é pra você.</p>
+      </div>
+      <ul class="checks checks--2">
+        <li>Quer aprender japonês do zero sem depender de vários aplicativos diferentes.</li>
+        <li>É fã de anime ou cultura japonesa e quer entender o básico do idioma.</li>
+        <li>Já tentou decorar hiragana e katakana sozinho e se perdeu no meio.</li>
+        <li>Prefere estudar num material físico, sem tela e sem internet.</li>
+        <li>Quer aprender frases práticas, não só teoria de gramática.</li>
+        <li>Vai começar um curso de japonês e quer chegar já sabendo o básico.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Como funciona -->
+  <section class="sec sec--surface">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Como funciona</h2>
+      </div>
+      <ol class="how">
+        <li>
+          <b>Compra</b>
+          <p>Pagamento único, recebe o PDF na hora.</p>
+        </li>
+        <li>
+          <b>Imprime e organiza numa pasta</b>
+          <p>As 20 páginas ficam prontas pra consulta.</p>
+        </li>
+        <li>
+          <b>Estuda na ordem</b>
+          <p>Hiragana, katakana e depois as frases.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- O que você recebe -->
+  <section class="sec">
+    <div class="wrap receive">
+      <h2>O que você recebe</h2>
+      <ul class="checks">
+        <li>Guia completo de 20 páginas em PDF</li>
+        <li>Tabela de Hiragana com traçado e pronúncia</li>
+        <li>Tabela de Katakana com traçado e pronúncia</li>
+        <li>100 frases do dia a dia com pronúncia em português</li>
+        <li>Formato A4, pronto pra impressão ou uso em tela</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Bônus -->
+  <section class="sec" style="padding-top:0">
+    <div class="wrap">
+      <div class="bonus-wrap">
+        <article class="bonus">
+          <span class="bonus-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M5 12v8h14v-8M12 8v12M12 8c-1.5-3-5-3.5-5-1.5S9 8 12 8zm0 0c1.5-3 5-3.5 5-1.5S15 8 12 8z"/></svg>
+            BÔNUS
+          </span>
+          <h3>Guia de Pronúncia dos Sons Difíceis do Japonês para Brasileiro</h3>
+          <p>Um guia com dicas específicas pros sons do japonês que costumam confundir quem fala português, com comparação de sons parecidos.</p>
+          <div class="val"><s>R$ 22,90</s><span>Incluso no material</span></div>
+        </article>
+
+        <article class="bonus">
+          <span class="bonus-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M5 12v8h14v-8M12 8v12M12 8c-1.5-3-5-3.5-5-1.5S9 8 12 8zm0 0c1.5-3 5-3.5 5-1.5S15 8 12 8z"/></svg>
+            BÔNUS
+          </span>
+          <h3>Cartelas de Vocabulário Extra para Treinar</h3>
+          <p>30 cartelas com vocabulário adicional além das 100 frases, ilustradas e prontas pra usar como flashcard extra.</p>
+          <div class="val"><s>R$ 19,90</s><span>Incluso no material</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Oferta final -->
+<section class="offer" id="oferta">
+  <div class="wrap">
+    <div class="ticket">
+      <h2>Tudo isso por R$ 27,90</h2>
+      <ul class="checks">
+        <li>Guia completo de 20 páginas em PDF</li>
+        <li>Tabela de Hiragana completa com traçado e pronúncia</li>
+        <li>Tabela de Katakana completa com traçado e pronúncia</li>
+        <li>100 frases do dia a dia com pronúncia em português</li>
+        <li>Formato A4, pronto pra impressão ou uso em tela</li>
+        <li class="b">Guia de Pronúncia dos Sons Difíceis do Japonês</li>
+        <li class="b">Cartelas de Vocabulário Extra para Treinar</li>
+        <li>Entrega imediata por e-mail</li>
+        <li>Garantia incondicional de 7 dias</li>
+      </ul>
+      <div class="price">
+        <div class="from">De <s>R$ 70,70</s> por</div>
+        <div class="now">R$ 27,90</div>
+        <div class="once">Pagamento único</div>
+      </div>
+      <a class="btn btn--lg" href="https://pay.cakto.com.br/4cbn35h_1134172">
+        Quero o guia — R$ 27,90
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <div class="guarantee">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg>
+        <p><b>Garantia de 7 dias.</b> Não gostou, o dinheiro volta — sem burocracia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Este material é um recurso educativo de apoio ao estudo do idioma japonês. Garantia incondicional de 7 dias.</p>
+    <p><a href="https://pay.cakto.com.br/4cbn35h_1134172">Ir para o checkout</a></p>
+  </div>
+</footer>
+
+<!-- Barra fixa (celular) -->
+<div class="sticky" id="sticky" aria-hidden="true">
+  <div class="p"><small>Pagamento único</small>R$ 27,90</div>
+  <a class="btn" href="#oferta" tabindex="-1">Quero o guia</a>
+</div>
+
+<script>
+(function(){
+  var bar = document.getElementById('sticky');
+  var heroCta = document.getElementById('hero-cta');
+  var offer = document.getElementById('oferta');
+  if(!bar || !('IntersectionObserver' in window)) return;
+  var heroOut = false, offerIn = false;
+  function update(){
+    var on = heroOut && !offerIn;
+    bar.classList.toggle('on', on);
+    bar.setAttribute('aria-hidden', on ? 'false' : 'true');
+    var link = bar.querySelector('a');
+    if(link) link.tabIndex = on ? 0 : -1;
+  }
+  new IntersectionObserver(function(entries){
+    var e = entries[0];
+    heroOut = !e.isIntersecting && e.boundingClientRect.top < 0;
+    update();
+  }).observe(heroCta);
+  new IntersectionObserver(function(entries){
+    offerIn = entries[0].isIntersecting;
+    update();
+  }, {threshold:0.05}).observe(offer);
+})();
+</script>
+</body>
+</html>
